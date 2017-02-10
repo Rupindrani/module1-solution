@@ -1,10 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="LunchCheck">
 <head>
   <meta charset="utf-8">
   <script src = "angular.min.js"></script>
+  <script src = "app.js"></script>
 </head>
 <body>
-  <h1>Welcome to Github</h1>
+  <div ng-controller="LunchCheckController">
+    <label ng-for="foodString">Enter food items: </label>
+    <input type ="text" ng-model="listOfItem">
+    <button ng-click="checkItems();">Check If Too Much</button>
+    {{result}}
+    </div>
 </body>
 </html>
